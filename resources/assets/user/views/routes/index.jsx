@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Switch, Route, HashRouter} from 'react-router-dom';
-import ThrowContainer from '../components/throw/ThrowContainer';
+import ThrowContainer from '../pages/throw/ThrowContainer';
+import './global.scss';
 
 class AppRoutes extends Component {
     render (){

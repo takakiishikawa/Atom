@@ -1,0 +1,11 @@
+@import "../styles/color";
+
+//base style
+body {
+    color: $black1;
+    min-height: 100vh;
+    background: linear-gradient(to left top, #EEEEEE 0%, #E2EEE2 33%, #E4E4EE 66%, #F2E8E8 100%);
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
