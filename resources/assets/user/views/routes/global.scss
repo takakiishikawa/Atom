@@ -1,7 +1,7 @@
 @import "../styles/color";
 
 //base style
-body {
+html {
     color: $black1;
     min-height: 100vh;
     background: linear-gradient(to left top, #EEEEEE 0%, #E2EEE2 33%, #E4E4EE 66%, #F2E8E8 100%);

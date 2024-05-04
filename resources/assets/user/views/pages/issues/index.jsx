@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import HeaderContainer from '../../components/header/HeaderContainer';
 
-class Throw extends Component {
+class Issues extends Component {
     render (){
         return (
             <div>
-                <HeaderContainer activeMenu="throw" />
-                <h1>Throw</h1>
+                <HeaderContainer activeMenu="issues" />
+                <h1>Issues</h1>
             </div>
         )
     }
 }
 
-export default Throw;
+export default Issues;
