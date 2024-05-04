@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import Issues from '.';
 
-
 class IssuesContainer extends Component {
     render (){
         return (
             <div>
-                <Issues />
+                <Issues {...this.props} />
             </div>
         )
     }

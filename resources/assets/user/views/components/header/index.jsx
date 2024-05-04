@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.png';
+import {Link} from 'react-router-dom';
 import SendIcon from '@mui/icons-material/Send';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -21,27 +22,29 @@ class Header extends Component {
         return (
             <div className='header'>
                 <div className='header__left'>
-                    <div className='header__left__logo'>
+                    <Link to='/' className='header__left__logo'>
                         <img src={logo} alt='logo' className='img' />
-                    </div>
+                    </Link>
                     <div className='header__left__menu'>
-                        <div className={`header__left__menu__item ${activeMenu=='throw' ? 'active' : null}`}>
+                        <Link to='/' className={`header__left__menu__item ${activeMenu=='throw' ? 'active' : null}`}>
                             <SendIcon className='icon' />
                             <span className='text'>THROW</span>
-                        </div>
-                        <div className={`header__left__menu__item ${activeMenu=='issues' ? 'active' : null}`}>
+                        </Link>
+                        <Link to='/issues' className={`header__left__menu__item ${activeMenu=='issues' ? 'active' : null}`}>
                             <RadioButtonCheckedIcon className='icon' />
                             <span className='text'>ISSUES</span>
-                        </div>
-                        <div className={`header__left__menu__item ${activeMenu=='draw' ? 'active' : null}`}>
+                        </Link>
+                        <Link to='/draw' className={`header__left__menu__item ${activeMenu=='draw' ? 'active' : null}`}>
                             <LabelIcon className='icon' />
-                            <span className='text'>Draw.io</span>
-                        </div>
+                            <span className='text'>DRAW.IO</span>
+                        </Link>
                     </div>
                 </div>
                 <div className='header__right'>
                     <span className='header__right__text'>T.K</span>
-                    <AccountCircleIcon className='header__right__icon' />
+                    <AccountCircleIcon
+                        className='header__right__icon'
+                    />
                 </div>
             </div>
         )

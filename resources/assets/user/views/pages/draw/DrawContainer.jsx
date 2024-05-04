@@ -6,7 +6,7 @@ class DrawContainer extends Component {
     render (){
         return (
             <div>
-                <Draw />
+                <Draw {...this.props} />
             </div>
         )
     }

@@ -5,8 +5,9 @@
     height: 36px;
     display: flex;
     align-items: center;
-    color: $black2;
     font-size: 11px;
+    color: $black2;
+
 
     &__left {
         display: flex;
@@ -39,9 +40,11 @@
                 gap: 7px;
                 height: 36px;
                 cursor: pointer;
+                text-decoration: none;
+                color: $black2;
 
-                &:active {
-                    border-bottom: 3px solid $gray3;
+                &:hover {
+                    border-bottom: 3px solid $gray4;
                 }
 
                 &.active {
