@@ -5,6 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LabelIcon from '@mui/icons-material/Label';
+import ProfilePopup from '../profile-popup';
 import './Header.scss';
 
 class Header extends Component {
@@ -12,12 +13,18 @@ class Header extends Component {
         super(props);
         this.state = {
             activeMenu: 'throw',
-        }
+            isOpen: false,
+        };
+    }
+
+    togglePopup = () => {
+        this.setState({
+            isOpen: !this.state.isOpen,
+        });
     }
 
     render () {
         const {activeMenu} = this.props;
-        console.log(activeMenu, 'activeMenu')
 
         return (
             <div className='header'>
@@ -41,10 +48,16 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className='header__right'>
-                    <span className='header__right__text'>T.K</span>
-                    <AccountCircleIcon
-                        className='header__right__icon'
-                    />
+                    <div
+                        className="header__right__container"
+                        onClick={this.togglePopup}
+                    >                    
+                        <span className='header__right__container__text'>T.K</span>
+                        <AccountCircleIcon className='header__right__container__icon' />
+                    </div>
+                    {this.state.isOpen && (
+                        <ProfilePopup />
+                    )}  
                 </div>
             </div>
         )

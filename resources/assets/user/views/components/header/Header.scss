@@ -64,19 +64,26 @@
     }
 
     &__right {
-        display: flex;
-        align-items: center;
-        justify-content: right;
+        position: relative;
         width: 20%;
-        gap: 7px;
 
-        &__text {
-            font-size: 11px;
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            gap: 7px;
+            cursor: pointer;
+
+            &__text {
+                font-size: 11px;
+            }
+            &__icon {
+                width: 30px !important;
+                height: auto !important;
+                color: $gray4;
+            }
         }
-        &__icon {
-            width: 30px !important;
-            height: auto !important;
-        }
+
     }
 
 
