@@ -1,0 +1,40 @@
+# Node modules
+/node_modules/
+
+# Build outputs
+/build/
+/dist/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency directories (Laravel)
+/vendor/
+
+# Laravel specific
+bootstrap/cache/*.php
+storage/*.key
+public/storage
+storage/framework/
+storage/logs/
+!storage/framework/.gitignore
+!storage/logs/.gitignore
+
+# Various IDEs and editors
+/.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.temp
